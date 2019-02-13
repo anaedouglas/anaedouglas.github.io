@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	background-image: url(../img/papel-textura.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+h1, h2, h3, h4, p {
+	text-align: center;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 400;
+	font-family: 'Great Vibes', Helvetica, sans-serif;
+	font-size: calc(65px + (160 - 65) * ((100vw - 320px) / (1024 - 320)));
+	text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+}
+
+h2 {
+	font: 400 10vw 'Cookie', Helvetica, sans-serif;
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
+}
+
+h3, h4 {
+	font-family: 'Oswald', sans-serif;	
+}
+
+h3 {
+	font-weight: 500;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1024 - 320)));
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+h4, p {
+	font-weight: 300;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1024 - 320)));
+}
+
+body {
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+#data {
+	font-weight: 700;
+	font-style: oblique;
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+#casamento-texto {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	color: white;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.rwd-break-reverse {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	body {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	h1 {
+		font-size: 160px;
+	}
+
+	h3 {
+		font-size: 55px;
+	}
+
+	h4, p {
+		font-size: 30px;
+	}
+
+	div.fluid-container {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	.rwd-break-reverse {
+		display: inline;
+	}
+
+	.rwd-break {
+		display: none;
+	}
+}
+

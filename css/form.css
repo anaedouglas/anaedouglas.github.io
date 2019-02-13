@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	background-image: url(../img/papel-textura.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+body {
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+h1, h2, h3, h4, p {
+	text-align: center;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 400;
+	font-family: 'Great Vibes', Helvetica, sans-serif;
+	font-size: calc(65px + (120 - 65) * ((100vw - 320px) / (1024 - 320)));
+	text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+}
+
+label {
+	font-weight: 300;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(24px + (45 - 24) * ((100vw - 320px) / (1024 - 320)));
+}
+
+input[type=text] {
+	height: calc((24px + (45 - 24) * ((100vw - 320px) / (1024 - 320))) + 20px);
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(24px + (45 - 24) * ((100vw - 320px) / (1024 - 320)));
+}
+
+input[type=email] {
+	height: calc((24px + (45 - 24) * ((100vw - 320px) / (1024 - 320))) + 20px);
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(24px + (45 - 24) * ((100vw - 320px) / (1024 - 320)));
+}
+
+button {
+	font-weight: 300;
+	font-family: 'Oswald', Helvetica, sans-serif;
+	font-size: calc(24px + (45 - 24) * ((100vw - 320px) / (1024 - 320))) !important;
+}
+
+.rwd-break-reverse {
+	display: none;
+}
+
+@media (min-width: 1200px) {
+	body {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	h1 {
+		font-size: 120px;
+	}
+
+	label, input {
+		font-size: 45px;
+	}
+
+	input[type=text] {
+		height: 65px;
+		font-size: 45px;
+	}
+
+	input[type=email] {
+		height: 65px;
+		font-size: 45px;
+	}
+
+	button {
+		font-size: 45px !important;
+	}
+
+	.rwd-break {
+		display: none;
+	}
+}
+
