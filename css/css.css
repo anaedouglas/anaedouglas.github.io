@@ -49,6 +49,15 @@ body {
 	padding-bottom: 20%;
 }
 
+a {
+	cursor: pointer;
+	font-size: calc(10px + (23 - 10) * ((100vw - 320px) / (1024 - 320))) !important;
+}
+
+div.fluid-container {
+	margin-bottom: 30px;
+}
+
 #data {
 	font-weight: 700;
 	font-style: oblique;
@@ -86,6 +95,10 @@ body {
 
 	h4, p {
 		font-size: 30px;
+	}
+
+	a {
+		font-size: 23px;
 	}
 
 	div.fluid-container {

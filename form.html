@@ -5,30 +5,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
-	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<title>Ana e Douglas</title>
+	<title>Ana & Douglas</title>
 </head>
 <body>
 	<h1>Formulário <br class="rwd-break"> de confirmação</h1>
 	<div class="container">
-		<form>
+		<form novalidate>
 			<div class="form-group">
-				<label for="nome">Nome</label>
+				<label for="nome">Nome Completo</label>
 				<input class="form-control" id="nome" type="text" name="nome">
+				<p id="validacaoNome" style="display: none">Campo não preechido.</p>
 			</div>
 			<div class="form-group">
 				<label for="email">Email</label>
 				<input class="form-control" id="email" type="email" name="email">
+				<p id="validacaoEmail" style="display: none">Email inválido.</p>
 			</div>
 			<div class="form-group">
 				<label for="telefone">Telefone</label>
-				<input class="form-control" id="telefone" type="text" name="telefone">
+				<input class="form-control" id="telefone" type="text" name="telefone" placeholder="xx xxxxxxxxx">
+				<p id="validacaoTelefone" style="display: none">Telefone inválido.</p>
 			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" onclick="return validarCampos()" class="btn btn-default">Enviar <img id="loading" style="display: none" src="img/loaging.gif"></button>
+			<br>
+			<p id="sucessoEnvio" style="display: none">Confirmação enviada com sucesso.</p>
+			<p id="falhaEnvio" style="display: none">Houve uma falha no envio, por favor tente novamente.</p>
 		</form>
 	</div>
+
+	<script type="text/javascript" src="js/telegram.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>

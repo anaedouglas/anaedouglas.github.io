@@ -24,4 +24,4 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("contador").innerHTML = "EXPIRED";
   }
-}, 1000);
+}, 1000);**/
