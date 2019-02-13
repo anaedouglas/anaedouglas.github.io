@@ -34,36 +34,36 @@ h1 {
 label {
 	font-weight: 300;
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(15px + (35 - 15) * ((100vw - 320px) / (1024 - 320)));
+	font-size: calc(18px + (38 - 18) * ((100vw - 320px) / (1024 - 320)));
 }
 
 input[type=text] {
-	height: calc((15px + (35 - 15) * ((100vw - 320px) / (1024 - 320))) + 20px);
+	height: calc((18px + (38 - 18) * ((100vw - 320px) / (1024 - 320))) + 20px);
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(15px + (35 - 15) * ((100vw - 320px) / (1024 - 320)));
+	font-size: calc(18px + (38 - 18) * ((100vw - 320px) / (1024 - 320)));
 }
 
 input[type=email] {
-	height: calc((15px + (35 - 15) * ((100vw - 320px) / (1024 - 320))) + 20px);
+	height: calc((18px + (38 - 18) * ((100vw - 320px) / (1024 - 320))) + 20px);
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(15px + (35 - 15) * ((100vw - 320px) / (1024 - 320)));
+	font-size: calc(18px + (38 - 18) * ((100vw - 320px) / (1024 - 320)));
 }
 
 button {
 	font-weight: 300;
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(15px + (35 - 15) * ((100vw - 320px) / (1024 - 320))) !important;
+	font-size: calc(18px + (38 - 18) * ((100vw - 320px) / (1024 - 320))) !important;
 }
 
 div.form-group p {
 	font-weight: 200;
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(10px + (30 - 10) * ((100vw - 320px) / (1024 - 320)));
+	font-size: calc(13px + (33 - 13) * ((100vw - 320px) / (1024 - 320)));
 	color: darkred;
 }
 
 img {
-	height: calc(15px + (35 - 15) * ((100vw - 320px) / (1024 - 320)));
+	height: calc(18px + (38 - 18) * ((100vw - 320px) / (1024 - 320)));
 }
 
 .rwd-break-reverse {
@@ -81,7 +81,7 @@ img {
 #falhaEnvio {
 	font-weight: 200;
 	font-family: 'Oswald', Helvetica, sans-serif;
-	font-size: calc(10px + (30 - 10) * ((100vw - 320px) / (1024 - 320)));
+	font-size: calc(13px + (33 - 13) * ((100vw - 320px) / (1024 - 320)));
 	color: darkred;
 	margin-top: 10px;
 }
@@ -97,29 +97,29 @@ img {
 	}
 
 	label, input {
-		font-size: 35px;
+		font-size: 38px;
 	}
 
 	div.form-group p {
-		font-size: 30px;
+		font-size: 33px;
 	}
 
 	img {
-		height: 35px;
+		height: 38px;
 	}
 
 	input[type=text] {
 		height: 65px;
-		font-size: 35px;
+		font-size: 38px;
 	}
 
 	input[type=email] {
 		height: 65px;
-		font-size: 35px;
+		font-size: 38px;
 	}
 
 	button {
-		font-size: 35px !important;
+		font-size: 38px !important;
 	}
 
 	.rwd-break {
@@ -127,11 +127,10 @@ img {
 	}
 
 	#sucessoEnvio {
-		font-size: 30px;
+		font-size: 33px;
 	}
 
 	#falhaEnvio {
-		font-size: 30px;
+		font-size: 33px;
 	}	
 }
-

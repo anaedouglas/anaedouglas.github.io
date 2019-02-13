@@ -9,7 +9,7 @@ html, body {
 	background-position: center center;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, p {
 	text-align: center;
 	margin: 0;
 }
@@ -23,12 +23,11 @@ h1 {
 }
 
 h2 {
-	font: 400 10vw 'Cookie', Helvetica, sans-serif;
-	text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
-}
-
-h3, h4 {
-	font-family: 'Oswald', sans-serif;	
+	font-weight: 400;
+	font-family: 'Cookie', Helvetica, sans-serif;
+	font-size: calc(28px + (53 - 28) * ((100vw - 320px) / (1024 - 320)));
+	text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+	margin-top: 20px;
 }
 
 h3 {
@@ -38,7 +37,7 @@ h3 {
 	text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
-h4, p {
+p {
 	font-weight: 300;
 	font-family: 'Oswald', Helvetica, sans-serif;
 	font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1024 - 320)));
@@ -51,7 +50,7 @@ body {
 
 a {
 	cursor: pointer;
-	font-size: calc(10px + (23 - 10) * ((100vw - 320px) / (1024 - 320))) !important;
+	font-size: calc(13px + (26 - 13) * ((100vw - 320px) / (1024 - 320))) !important;
 }
 
 div.fluid-container {
@@ -62,17 +61,6 @@ div.fluid-container {
 	font-weight: 700;
 	font-style: oblique;
 	text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-}
-
-#casamento-texto {
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 5px;
-	color: white;
-	padding: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 .rwd-break-reverse {
@@ -89,16 +77,20 @@ div.fluid-container {
 		font-size: 160px;
 	}
 
+	h2 {
+		font-size: 53px;
+	}
+
 	h3 {
 		font-size: 55px;
 	}
 
-	h4, p {
+	p {
 		font-size: 30px;
 	}
 
 	a {
-		font-size: 23px !important;
+		font-size: 26px !important;
 	}
 
 	div.fluid-container {
