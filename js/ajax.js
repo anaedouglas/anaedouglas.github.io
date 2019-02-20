@@ -1,4 +1,23 @@
-function enviarMensagemTelegram(dados) {
+function enviarConfirmacao(requestData) {
+	var ajax = new XMLHttpRequest();
+	// Seta tipo de requisição: Post e a URL da API
+	ajax.open("POST", "https://wedding-api-hk.herokuapp.com/confirmacao", true);
+	ajax.setRequestHeader("Content-type", "application/json");
+	// Seta paramêtros da requisição e envia a requisição
+	ajax.send(JSON.stringify(requestData));
+	// Cria um evento para receber o retorno.
+	ajax.onreadystatechange = function() {
+		// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			enviarMensagemTelegram(requestData);
+			sucessoNoEnvio();
+		} else if (ajax.status != 200) {
+			falhaNoEnvio();
+		}
+	};
+}
+
+function enviarMensagemTelegram(requestData) {
 	var ajax = new XMLHttpRequest();
 
 	var requestData = {
@@ -11,34 +30,6 @@ function enviarMensagemTelegram(dados) {
 	ajax.setRequestHeader("Content-type", "application/json");
 	// Seta paramêtros da requisição e envia a requisição
 	ajax.send(JSON.stringify(requestData));
-	// Cria um evento para receber o retorno.
-	ajax.onreadystatechange = function() {
-		
-		// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
-		if (ajax.readyState == 4 && ajax.status == 200) {
-			sucessoNoEnvio();
-		} else if (ajax.status != 200) {
-			falhaNoEnvio();
-		}
-	};
-}
-
-function enviarConfirmacao(requestData) {
-	var ajax = new XMLHttpRequest();
-	// Seta tipo de requisição: Post e a URL da API
-	ajax.open("POST", "https://wedding-api-hk.herokuapp.com/confirmacao", true);
-	ajax.setRequestHeader("Content-type", "application/json");
-	// Seta paramêtros da requisição e envia a requisição
-	ajax.send(JSON.stringify(requestData));
-	// Cria um evento para receber o retorno.
-	ajax.onreadystatechange = function() {
-		// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
-		if (ajax.readyState == 4 && ajax.status == 200) {
-			sucessoNoEnvio();
-		} else if (ajax.status != 200) {
-			falhaNoEnvio();
-		}
-	};
 }
 
 function excluirConfirmacao(id) {
@@ -59,6 +50,24 @@ function excluirConfirmacao(id) {
 	};
 }
 
+function getConfirmacoes() {
+	var ajax = new XMLHttpRequest();
+	// Seta tipo de requisição: Post e a URL da API
+	ajax.open("GET", "https://wedding-api-hk.herokuapp.com/confirmacao", true);
+	ajax.setRequestHeader("Content-type", "application/json");
+	// Seta paramêtros da requisição e envia a requisição
+	ajax.send();
+	// Cria um evento para receber o retorno.
+	ajax.onreadystatechange = function() {
+		// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			construirHTML(JSON.parse(ajax.responseText));
+		} else if (ajax.status != 200) {
+			console.log('Falha');
+		}
+	};
+}
+
 function formatarMensagem(dados) {
-	 return `<b>Confirmação Recebida</b>\n<b>Nome: </b> ${dados.nome}\n<b>Email: </b>${dados.email}\n<b>Telefone: </b>+55 ${dados.telefone}`;
+	 return `<b>Confirmação Recebida</b>\n<b>Nome: </b> ${dados.nomeCompleto}\n<b>Email: </b>${dados.email}\n<b>Telefone: </b>+55 ${dados.telefone}`;
 }

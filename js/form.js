@@ -23,12 +23,6 @@ function envioFormulario(event) {
 		email: email.value,
 		telefone: telefone.value
 	});
-
-	enviarMensagemTelegram({
-		nomeCompleto: nome.value,
-		email: email.value,
-		telefone: telefone.value
-	});
 }
 
 function sucessoNoEnvio() {

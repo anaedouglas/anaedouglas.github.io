@@ -1,0 +1,19 @@
+dt {
+  float: left;
+  clear: left;
+}
+
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 10px;
+}
+
+.rwd-break-reverse {
+  display: inline;
+}
+
+@media (min-width: 400px) {
+  .rwd-break {
+    display: none;
+  }
+}
