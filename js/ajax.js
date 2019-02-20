@@ -58,3 +58,7 @@ function excluirConfirmacao(id) {
 		}
 	};
 }
+
+function formatarMensagem(dados) {
+	 return `<b>Confirmação Recebida</b>\n<b>Nome: </b> ${dados.nome}\n<b>Email: </b>${dados.email}\n<b>Telefone: </b>+55 ${dados.telefone}`;
+}
