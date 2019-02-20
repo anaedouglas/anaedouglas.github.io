@@ -26,6 +26,7 @@ function construirHTML(confirmacoesDados) {
 	});
 
 	document.querySelector('.container').innerHTML += html;
+	document.querySelector('.loading-div').style.display = 'none';
 }
 
 buscarConfirmacoes();
