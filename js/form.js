@@ -18,8 +18,8 @@ function envioFormulario(event) {
 	document.querySelector('#sucessoEnvio').style.display = 'none';
 	document.querySelector('#falhaEnvio').style.display = 'none';
 
-	enviarMensagem({
-		nome: nome.value,
+	enviarConfirmacao({
+		nomeCompleto: nome.value,
 		email: email.value,
 		telefone: telefone.value
 	});
@@ -73,6 +73,9 @@ function validarEmail() {
 	var emailValido = true;
 
 	var regExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g);
+
+	if (!document.querySelector('#email').value)
+		return true;
 
 	emailValido = regExp.test(document.querySelector('#email').value);
 	

@@ -16,7 +16,7 @@
 	<div class="container">
 		<form novalidate>
 			<div class="form-group">
-				<label for="nome">Nome Completo</label>
+				<label for="nome">Nome Completo <span style="color: darkred">*</span></label>
 				<input class="form-control" id="nome" type="text" name="nome">
 				<p id="validacaoNome" style="display: none">Campo não preechido.</p>
 			</div>
@@ -26,7 +26,7 @@
 				<p id="validacaoEmail" style="display: none">Email inválido.</p>
 			</div>
 			<div class="form-group">
-				<label for="telefone">Telefone</label>
+				<label for="telefone">Telefone <span style="color: darkred">*</span></label>
 				<input class="form-control" id="telefone" type="text" name="telefone" placeholder="xx xxxxxxxxx">
 				<p id="validacaoTelefone" style="display: none">Telefone inválido.</p>
 			</div>
@@ -37,7 +37,7 @@
 		</form>
 	</div>
 
-	<script type="text/javascript" src="js/telegram.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
 	<script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>
