@@ -19,7 +19,7 @@ function envioFormulario(event) {
 	document.querySelector('#falhaEnvio').style.display = 'none';
 
 	enviarMensagem({
-		nome: nome.value,
+		nomeCompleto: nome.value,
 		email: email.value,
 		telefone: telefone.value
 	});
