@@ -22,7 +22,7 @@ function enviarMensagemTelegram(requestData) {
 
 	var requestData = {
 		chat_id : '@anaedouglas',
-		text : formatarMensagem(dados),
+		text : formatarMensagem(requestData),
 		parse_mode: 'HTML'
 	}
 	// Seta tipo de requisição: Post e a URL da API
